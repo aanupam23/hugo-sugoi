@@ -1,3 +1,5 @@
-</body>
-
-</html>
+<footer>
+    <span class="copyright">
+        {{ with replace .Site.Copyright "{currentYear}" now.Year }}{{ . | markdownify}} &middot; {{ end }}
+	</span>
+</footer>
