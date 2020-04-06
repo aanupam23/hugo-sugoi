@@ -3,9 +3,17 @@
     <div class="row">
       <div class="one-half column" style="margin-top: 25%">
         <h2 class="title">A dead simple, responsive boilerplate.</h2>
+        {{ range first 5 (where .Site.Pages "Type" "post" )}}
+        <p>
+          <a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </p>
+        {{ end }}       
+      </div>
+      <div class="one-half column" style="margin-top: 25%">
+        <h2 class="title">A dead simple, responsive boilerplate.</h2>
         <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some
           content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-          <a class="button button-primary" href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip" onClick="_gaq.push(['_trackEvent', 'skeleton', 'download'])">Download</a>
+          <a class="button button-primary" href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip">Download</a>
       </div>
     </div>
   </div>
