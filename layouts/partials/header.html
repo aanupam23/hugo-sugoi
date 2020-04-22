@@ -1,1 +1,14 @@
-
+<nav>
+    <label for="drop" class="toggle"><i class="fas fa-bars float_right" aria-hidden="true"></i> Sugoi</label>
+    <input type="checkbox" id="drop" />
+    <ul class="menu">
+        <li><a href="{$mybb->settings['bburl']}" class="Home"><span><i class="fas fa-home" aria-hidden="true"></i>
+                    Home</span></a></li>
+        <li><a href="{$mybb->settings['bburl']}/index.php" class="Forum"><span><i class="fas fa-circle"
+                        aria-hidden="true"></i> Forum</span></a></li>
+        <li><a href="{$mybb->settings['bburl']}/memberlist.php" class="Members"><span><i class="fas fa-user"
+                        aria-hidden="true"></i> Memberlist</span></a></li>
+        <li class="float_right mobile_hide"><a href="{$mybb->settings['bburl']}/member.php?action=register"
+                class="register"><i class="fas fa-child"></i> Create an account</a></li>
+    </ul>
+</nav>

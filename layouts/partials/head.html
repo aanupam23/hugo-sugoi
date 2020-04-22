@@ -16,6 +16,8 @@
 {{ $css := "css/custom.css" | absURL }}
 <link rel="stylesheet" href="{{ $css }}">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+
 {{ if .Site.Params.favicon }}
 <link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/png" />
 {{ end }}

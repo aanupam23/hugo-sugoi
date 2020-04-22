@@ -1,151 +1,269 @@
-/* Shared
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button {
-    border-radius: 100px;
+.toggle,
+input[id="drop"] {
+  display: none;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background: #222;
+}
+
+nav::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+nav ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  float: left;
+}
+
+nav ul li>a:only-child::after {
+  content: "";
+}
+
+nav ul li>a::after {
+  content: " ";
+  display: inline;
+  font-family: fontawesome;
+}
+
+nav a {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  padding: 14px 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #333;
+}
+
+nav ul li ul li:hover {
+  background: #444 none repeat scroll 0 0;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 35px;
+}
+
+nav ul li:hover>ul {
+  display: inherit;
+}
+
+nav ul ul li {
+  display: list-item;
+  float: none;
+  position: relative;
+  width: 170px;
+}
+
+nav ul ul ul li {
+  left: 170px;
+  position: relative;
+  top: -60px;
+}
+
+nav ul li>a::after {
+  content: " ";
+  display: inline;
+  font-family: fontawesome;
+}
+
+nav ul li>a:only-child::after {
+  content: "";
+}
+
+@media all and (max-width: 768px) {
+  nav {
+    margin: 0;
   }
-  
-  /* Sections
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .section {
-    padding: 8rem 0 7rem;
-    text-align: center;
-  }
-  .section-heading,
-  .section-description {
-    margin-bottom: 1.2rem;
-  }
-  
-  /* Hero
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .phones {
-    position: relative;
-  }
-  .phone {
-    position: relative;
-    max-width: 80%;
-    margin: 3rem auto -12rem;
-  }
-  .phone + .phone {
+
+  .toggle+a,
+  .menu {
     display: none;
   }
-  
-  /* Values
+
+  .toggle {
+    color: #ffffff;
+    display: block;
+    font-size: 22px;
+    padding: 10px 10px;
+    text-decoration: none;
+    text-align: left;
+  }
+
+  .toggle:hover {
+    background-color: #333;
+  }
+
+  [id^="drop"]:checked+ul {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+
+  nav a,
+  nav ul ul ul a {
+    background-color: #222;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+
+  }
+
+  nav a:hover,
+  nav ul ul ul a {
+    background-color: #111;
+    text-decoration: none;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a {
+    background-color: #555;
+  }
+
+  nav ul ul {
+    color: #ffffff;
+    float: none;
+    position: static;
+  }
+
+  nav ul ul li:hover>ul,
+  nav ul li:hover>ul {
+    display: none;
+  }
+
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul ul li {
+    position: static;
+  }
+}
+
+@media all and (max-width: 330px) {
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  nav ul {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  nav ul ul {
+    margin-left: 0;
+  }
+}
+
+/* Floating FA icon */
+.svg-inline--fa.fa-bars.fa-w-14.float_right {
+  float: right;
+}
+
+.button {
+  border-radius: 100px;
+}
+
+/* main */
+.main {
+  background: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  min-height: 400px;
+  padding: 0;
+  width: 97%;
+  margin-top: -100px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+@media (min-width: 400px) {
+  .main {
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .main {
+    margin-top: -100px;
+    width: 80%; }
+  }
+
+/* Sections
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .values {
-    background-image: url('http://getskeleton.com/examples/landing/images/values-bg.jpg');
-    background-size: cover;
-    color: #fff;
-    padding-bottom: 5rem;
-  }
-  .value-multiplier {
-    margin-bottom: .5rem;
-    color: #11DFC7;
-  }
-  .value-heading {
-    margin-bottom: .3rem;
-  }
-  .value-description {
-    opacity: .8;
-    font-weight: 300;
-  }
-  
-  /* Help
+.section {
+  padding: 8rem 0 7rem;
+}
+
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* Hero
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .get-help {
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* Categories
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .categories {
-    background-image: url('http://getskeleton.com/examples/landing/images/values-bg.jpg');
-    background-size: cover;
-    color: #fff;
-  }
-  .categories .section-description { 
-    margin-bottom: 4rem;
-  }
-  
-  /* Bigger than 550 */
-  @media (min-width: 550px) {
-    .section {
-      padding: 12rem 0 11rem;
-    }
-    .hero {
-      padding-bottom: 12rem;
-      text-align: left;
-      height: 165px;
-    }
-    .phone {
-      position: absolute;
-      top: -7rem;
-      right: 3rem;
-      max-height: 362px;
-      z-index: 3;
-    }
-    .phone + .phone {
-      top: -6rem;
-      display: block;
-      max-width: 73.8%;
-      right: 0;
-      z-index: 2;
-      max-height: 338px;
-    }
-    .hero-heading {
-      font-size: 2.4rem;
-    }
-  }
-  
-  /* Bigger than 750 */
-  @media (min-width: 750px) {
-    .hero {
-      height: 190px;
-    }
-    .hero-heading {
-      font-size: 2.6rem;
-    }
-    .section {
-      padding: 14rem 0 15rem;
-    }
-    .hero {
-      padding: 16rem 0 14rem;
-    }
-    .section-description {
-      max-width: 60%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .phone {
-      top: -14rem;
-      right: 5rem;
-      max-height: 510px;
-    }
-    .phone + .phone {
-      top: -12rem;
-      max-height: 472px;
-    }
-    .categories {
-      padding: 15rem 0 8rem;
-    }
-  }
-  
-  /* Bigger than 1000 */
-  @media (min-width: 1000px) {
-    .section {
-      padding: 20rem 0 19rem;
-    }
-    .hero {
-      padding: 22rem 0;
-    }
-    .hero-heading {
-      font-size: 3.0rem;
-    }
-    .phone {
-      top: -16rem;
-      max-height: 615px;
-    }
-    .phone + .phone {
-      top: -14rem;
-      max-height: 570px;
-    }
+  .hero {
+    background: #222;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 200px;
+    color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
