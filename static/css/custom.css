@@ -116,6 +116,7 @@ nav ul li>a:only-child::after {
     padding: 10px 10px;
     text-decoration: none;
     text-align: left;
+    cursor: pointer;
   }
 
   .toggle:hover {
@@ -224,7 +225,7 @@ nav ul li>a:only-child::after {
   margin-bottom: auto;
   min-height: 400px;
   padding: 0;
-  width: 97%;
+  width: 92%;
   margin-top: -100px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -266,4 +267,16 @@ nav ul li>a:only-child::after {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+
+  .row.content {
+    padding: 30px;
+    margin-top: -70px;
+}
+
+@media (min-width: 550px) {
+  .row.content {
+    padding: 75px;
+    margin-top: -75px;
   }

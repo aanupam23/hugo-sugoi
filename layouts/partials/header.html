@@ -1,14 +1,17 @@
 <nav>
-    <label for="drop" class="toggle"><i class="fas fa-bars float_right" aria-hidden="true"></i> Sugoi</label>
+    <label for="drop" class="toggle"><i class="fas fa-bars float_right" aria-hidden="true"></i> <span><i class="fas fa-fire" aria-hidden="true"></i>
+        Sugoi</span></label>
     <input type="checkbox" id="drop" />
     <ul class="menu">
-        <li><a href="{$mybb->settings['bburl']}" class="Home"><span><i class="fas fa-home" aria-hidden="true"></i>
-                    Home</span></a></li>
-        <li><a href="{$mybb->settings['bburl']}/index.php" class="Forum"><span><i class="fas fa-circle"
-                        aria-hidden="true"></i> Forum</span></a></li>
-        <li><a href="{$mybb->settings['bburl']}/memberlist.php" class="Members"><span><i class="fas fa-user"
-                        aria-hidden="true"></i> Memberlist</span></a></li>
-        <li class="float_right mobile_hide"><a href="{$mybb->settings['bburl']}/member.php?action=register"
-                class="register"><i class="fas fa-child"></i> Create an account</a></li>
+        <li><a href="{$mybb->settings['bburl']}" class="Home"><span><i class="fas fa-fire" aria-hidden="true"></i>
+                    Sugoi</span></a></li>
+                        {{ range .Site.Menus.nav }}
+                        <li class="u-pull-right">
+                            <a href="{{ .URL | absLangURL }}" class="Members">
+                            <span><i class="fas fa-user"
+                            aria-hidden="true"></i> {{ .Name }}</span>
+                        </a>
+                        </li>
+                        {{ end }}
     </ul>
 </nav>
