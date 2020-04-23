@@ -3,8 +3,6 @@
 Hugo-Sugoi is ultra minimal theme built for personal blogs and can be used for learning hugo theme designing. Feel free to use this theme for creating an awesome hugo theme.
 Sugoi theme is bare-bones(literally since it is built on *Skeleton*) and the theme is javascript free. 
 
-[Demo Link](https://github.com/aanupam23/hugo-sugoi)
-
 ### Features
 - Built on Skeleton and javascript free
 - Consist of custom.css
