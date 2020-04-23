@@ -208,11 +208,6 @@ nav ul li>a:only-child::after {
   }
 }
 
-/* Floating FA icon */
-.svg-inline--fa.fa-bars.fa-w-14.float_right {
-  float: right;
-}
-
 .button {
   border-radius: 100px;
 }
@@ -261,14 +256,18 @@ nav ul li>a:only-child::after {
     background: #222;
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 200px;
+    height: 100px;
     color: #eeeeee;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
   }
+  @media (min-width: 550px) {
+    .hero {
+      height: 150px;
 
+    }
+  }
 
   .row.content {
     padding: 30px;
@@ -280,3 +279,8 @@ nav ul li>a:only-child::after {
     padding: 75px;
     margin-top: -75px;
   }
+}
+
+footer {
+  text-align: center;
+}

@@ -1,40 +1,39 @@
 {{ define "main" }}
 
-<div class="section hero">
-  <div class="container">
-    <h3 class="section-heading">Need help getting started?</h3>
-    <a class="button button-primary" href="http://getskeleton.com">View Skeleton Docs</a>
-  </div>
-</div>
+{{ partial "hero.html" . }}
 
 <div class="section main">
-    <div class="row content">
-        <article>
-        {{ range first 5 (where .Site.RegularPages "Type" "post" )}}
-        <i class="{{.Params.Icon}}"></i> 
-        <span class="category">
+  <div class="row content">
+    <article>
+      {{ range first 6 (where .Site.RegularPages "Type" "post" )}}
+      <i class="{{.Params.Icon}}"></i>
+      <span class="category">
         {{ range .Params.Categories }}
-          <a href="{{ "/categories/" | relLangURL}}{{ . | urlize }}">
+        <a href="{{ "/categories/" | relLangURL}}{{ . | urlize }}">
           {{.}}
         </a>
-        </span>
-        {{ end }}
-        {{ if gt .ReadingTime 1 }}
-        {{ .Scratch.Set "readingTime" "minutes" }}
-        {{ else }}
-        {{ .Scratch.Set "readingTime" "minute" }}
-        {{ end }}
+      </span>
+      {{ end }}
+      {{ if gt .ReadingTime 1 }}
+      {{ .Scratch.Set "readingTime" "minutes" }}
+      {{ else }}
+      {{ .Scratch.Set "readingTime" "minute" }}
+      {{ end }}
 
-        <i class="far fa-clock"></i> {{ .ReadingTime }} {{ .Scratch.Get "readingTime" }} <i
-          class="fas fa-share-alt"></i>
-        </h6>
-        <h5>
-          <a href="{{.RelPermalink}}" class="category" alt="{{.Title}}" title="{{.Title}}">{{.Title}}</a>
-        </h5>
-        <i class="far fa-calendar"></i> {{.Date.Format "2006-01-02"}}
-      </article>
-        {{ end }}
+      <i class="far fa-clock"></i> {{ .ReadingTime }} {{ .Scratch.Get "readingTime" }} <i class="fas fa-share-alt"></i>
+      </h6>
+      <h5>
+        <a href="{{.RelPermalink}}" class="category" alt="{{.Title}}" title="{{.Title}}">{{.Title}}</a>
+      </h5>
+      <i class="far fa-calendar"></i> {{.Date.Format "2006-01-02"}}
+    </article>
+    {{ end }}
+    <div class="row">
+      <div class="six columns">Six</div>
+      <div class="six columns">Six</div>
     </div>
+  </div>
+  <hr>
 </div>
 
 {{ end }}

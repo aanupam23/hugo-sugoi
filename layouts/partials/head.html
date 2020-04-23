@@ -20,4 +20,7 @@
 
 {{ if .Site.Params.favicon }}
 <link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/png" />
+
+{{ template "_internal/google_analytics.html" . }}
+
 {{ end }}
