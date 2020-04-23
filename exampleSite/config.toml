@@ -1,5 +1,5 @@
 theme = "hugo-sugoi"
-baseURL = "http://example.com/"
+baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "Sugoi"
 copyright = "&copy; {currentYear} Your Site"
