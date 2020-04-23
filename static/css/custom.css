@@ -281,6 +281,10 @@ nav ul li>a:only-child::after {
   }
 }
 
+.language-html {
+  color: #444;
+}
+
 footer {
   text-align: center;
 }

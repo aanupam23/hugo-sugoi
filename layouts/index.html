@@ -21,7 +21,8 @@
       </h5>
       <p class="card-text">{{ .Summary }}</p>
       <div class="row">
-        <div class="nine columns"> <i class="{{.Params.Icon}}"></i>
+        <div class="six columns"><a class="button" href="{{ .Permalink }}">Read More</a></div>
+        <div class="six columns"><div class="u-pull-right"><i class="{{.Params.Icon}}"></i>
           <span class="category">
             {{ range .Params.Categories }}
             <a href="{{ "/categories/" | relLangURL}}{{ . | urlize }}">
@@ -30,7 +31,7 @@
           </span>
           {{ end }}
         </div>
-        <div class="three columns"><a class="button u-pull-right" href="{{ .Permalink }}">Read More</a></div>
+        </div>
       </div>
     {{ end }}
   </article>
