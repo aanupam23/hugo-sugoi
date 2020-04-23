@@ -13,13 +13,14 @@
     <div class="row">
       {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
       {{ range $paginator.Pages }}
+      <div class="row">
+        <div class="nine columns"> <i class="far fa-calendar"></i> {{.Date.Format "2006-01-02"}}</div>
+        <div class="three columns"> <i class="far fa-clock"></i> Reading Time: {{ .ReadingTime }}
+          {{ .Scratch.Get "readingTime" }}</div>
+      </div>
       <h4>
         <a href="{{ .Permalink }}" class="h5 d-block my-3">{{ .Title | markdownify }}</a>
       </h4>
-      <div class="mb-3 post-meta">
-        <span>By {{ .Site.Params.Author }} on
-          {{ if not .Params.HideDate }}{{ .PublishDate.Format "02 January 2006" }}{{ end }}</span>
-      </div>
       <p class="card-text">{{ .Summary }}</p>
       <div class="row">
         <div class="nine columns"> <i class="{{.Params.Icon}}"></i>

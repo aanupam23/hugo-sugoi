@@ -34,3 +34,4 @@ $ git submodule add https://github.com/aanupam23/hugo-sugoi.git themes/hugo-sugo
 ### Acknowledgements
 - [Skeleton](https://github.com/dhg/Skeleton/)
 - [Hugo Templates](https://gohugo.io/templates)
+- [Lorem Markdownum](https://jaspervdj.be/lorem-markdownum/)
