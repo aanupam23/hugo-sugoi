@@ -5,6 +5,11 @@ Sugoi theme is bare-bones(literally since it is built on *Skeleton*) and the the
 
 [Theme Demo](https://gosugoi.onrender.com/)
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/aanupam23/hugo-sugoi/master/images/screenshot.png" width="100%" alt="hugo-sugoi - An Ultra Minimal Hugo Theme">
+</div>
+
+
 ### Features
 - Built on Skeleton and javascript free
 - Consist of custom.css
