@@ -13,9 +13,3 @@ min_version = "0.41.0"
 [author]
   name = "aanupam23"
   homepage = "https://github.com/aanupam23/"
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
