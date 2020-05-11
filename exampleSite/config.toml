@@ -2,7 +2,6 @@ theme = "hugo-sugoi"
 baseURL = "https://example.com"
 languageCode = "en-us"
 title = "Sugoi"
-copyright = "&copy; {currentYear} Your Site"
 summaryLength = 20
 paginate = 5
 # Google Analytics ID, Uncomment below line to enable
@@ -24,15 +23,15 @@ contact = "Send me a message and I will get back as soon as possible."
     [[menu.nav]]
         name    = "about"
         pre = "<i class='fas fa-home'></i>"
-        url     = "/about/"
+        url     = "/about"
         weight  = -1
     [[menu.nav]]
         name    = "blog"
         pre = "<i class='fas fa-list'></i>"
-        url     = "/post/"
+        url     = "/post"
         weight  = -2
     [[menu.nav]]
         name    = "contact"
         pre = "<i class='fas fa-envelope'></i>"
-        url     = "/contact/"
+        url     = "/contact"
         weight  = -3
