@@ -212,7 +212,6 @@ nav ul li>a:only-child::after {
   border-radius: 100px;
 }
 
-/* main */
 .main {
   background: #ffffff;
   margin-left: auto;
@@ -232,15 +231,13 @@ nav ul li>a:only-child::after {
     padding: 0; }
 }
 
-/* For devices larger than 550px */
 @media (min-width: 550px) {
   .main {
     margin-top: -100px;
     width: 80%; }
   }
 
-/* Sections
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .section {
   padding: 8rem 0 7rem;
 }
@@ -250,9 +247,7 @@ nav ul li>a:only-child::after {
   margin-bottom: 1.2rem;
 }
 
-/* Hero
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .hero {
+.hero {
     background: #222;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -283,6 +278,10 @@ nav ul li>a:only-child::after {
 
 .language-html {
   color: #444;
+}
+
+.svg-inline--fa {
+  margin-right: 3px;
 }
 
 footer {
