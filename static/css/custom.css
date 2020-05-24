@@ -1,3 +1,13 @@
+a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #0FA0CE;
+}
+
 .toggle,
 input[id="drop"] {
   display: none;
@@ -228,14 +238,16 @@ nav ul li>a:only-child::after {
 @media (min-width: 400px) {
   .main {
     width: 85%;
-    padding: 0; }
+    padding: 0;
+  }
 }
 
 @media (min-width: 550px) {
   .main {
     margin-top: -100px;
-    width: 80%; }
+    width: 80%;
   }
+}
 
 
 .section {
@@ -248,25 +260,26 @@ nav ul li>a:only-child::after {
 }
 
 .hero {
-    background: #222;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 100px;
-    color: #eeeeee;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-  @media (min-width: 550px) {
-    .hero {
-      height: 150px;
+  background: #222;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100px;
+  color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
-    }
-  }
+@media (min-width: 550px) {
+  .hero {
+    height: 150px;
 
-  .row.content {
-    padding: 30px;
-    margin-top: -70px;
+  }
+}
+
+.row.content {
+  padding: 30px;
+  margin-top: -70px;
 }
 
 @media (min-width: 550px) {
