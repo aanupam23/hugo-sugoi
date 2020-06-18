@@ -263,7 +263,8 @@ nav ul li>a:only-child::after {
   background: #222;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 100px;
+  height: 100%;
+  min-height: 200px;
   color: #eeeeee;
   display: flex;
   justify-content: center;
@@ -272,8 +273,7 @@ nav ul li>a:only-child::after {
 
 @media (min-width: 550px) {
   .hero {
-    height: 150px;
-
+    min-height: 150px;
   }
 }
 
