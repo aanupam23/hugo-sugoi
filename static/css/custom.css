@@ -230,7 +230,7 @@ nav ul li>a:only-child::after {
   min-height: 400px;
   padding: 0;
   width: 92%;
-  margin-top: -100px;
+  margin-top: -50px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -244,11 +244,10 @@ nav ul li>a:only-child::after {
 
 @media (min-width: 550px) {
   .main {
-    margin-top: -100px;
+    margin-top: -50px;
     width: 80%;
   }
 }
-
 
 .section {
   padding: 8rem 0 7rem;
@@ -263,8 +262,6 @@ nav ul li>a:only-child::after {
   background: #222;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 100%;
-  min-height: 200px;
   color: #eeeeee;
   display: flex;
   justify-content: center;
@@ -272,8 +269,8 @@ nav ul li>a:only-child::after {
 }
 
 @media (min-width: 550px) {
-  .hero {
-    min-height: 150px;
+  h1 {
+    font-size: 4.0rem;
   }
 }
 
@@ -299,4 +296,15 @@ nav ul li>a:only-child::after {
 
 footer {
   text-align: center;
+  color: #ccc;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: #0FA0CE;
 }
